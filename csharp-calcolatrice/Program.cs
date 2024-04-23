@@ -59,6 +59,14 @@
 
             double potenzaNum2 = CalcoliHelper.Potenza(4, 0);
             Console.WriteLine($"La potenza di 4 alla 0 è {potenzaNum2}");
+
+            double potenzaNum3 = CalcoliHelper.Potenza(-2, 3);
+            Console.WriteLine($"La potenza di -2 alla 3 è {potenzaNum3}");
+
+            double potenzaNum4 = CalcoliHelper.Potenza(0, 0);
+            Console.WriteLine($"La potenza di 0 alla 0 è {potenzaNum4}");
+
+
         }
     }
 }
