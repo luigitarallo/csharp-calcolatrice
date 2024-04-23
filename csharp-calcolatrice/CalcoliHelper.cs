@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,151 +16,133 @@ namespace csharp_calcolatrice
 
         // Somma di due numeri interi
 
-        public static void Somma(int num1, int num2)
+        public static int Somma(int num1, int num2)
         {
-            Console.WriteLine($"La somma di {num1} e {num2} è {num1 + num2}");
+            int sum = num1 + num2;
+            return sum;
         }
 
         // Somma di due numeri double
 
-        public static void Somma(double num1, double num2)
+        public static double Somma(double num1, double num2)
         {
-            Console.WriteLine($"La somma di {num1} e {num2} è {num1 + num2}");
+            double sum = num1 + num2;
+            return sum;
         }
 
         // Differenza tra due numeri interi
 
-        public static void Differenza(int num1, int num2)
+        public static int Differenza(int num1, int num2)
         {
-            Console.WriteLine($"La differenza tra {num1} e {num2} è: {num1 - num2}");
+            int diff = num1 - num2;
+            return diff;
         }
 
         // Differenza tra due numeri double
 
-        public static void Differenza(double num1, double num2)
+        public static double Differenza(double num1, double num2)
         {
-            if (num1 > num2)
-            {
-                Console.WriteLine($"La differenza tra {num1} e {num2} è: {num1 - num2}");
-            }
-            else if (num1 < num2)
-            {
-                Console.WriteLine($"{num1} è minore di {num2}, non è possibile effettuare una sottrazione tra interi");
-            }
-            else
-            {
-                Console.WriteLine($"La differenza tra {num1} e {num2} è zero");
-            }
+            double diff = num1 - num2;
+            return diff;
         }
 
         // Moltiplicazione di due numeri interi
 
-        public static void Moltiplicazione(int num1, int num2)
+        public static int Moltiplicazione(int num1, int num2)
         {
-            Console.WriteLine($"{num1} moltiplicato {num2} è uguale a {num1 * num2}");
+            int mult = num1 * num2;
+            return mult;
         }
 
         // Moltiplicazione di due numeri double
 
-        public static void Moltiplicazione(double num1, double num2)
+        public static double Moltiplicazione(double num1, double num2)
         {
-            Console.WriteLine($"{num1} moltiplicato {num2} è uguale a {num1 * num2}");
+            double mult = num1 * num2;
+            return mult;
         }
 
         // Valore assoluto di un numero intero
 
-        public static void ValoreAssoluto(int num)
+        public static int ValoreAssoluto(int num)
         {
-            int numeroAssoluto = num;
             if (num < 0)
             {
                 num = -num;
+                return num;
             }
-            Console.WriteLine($"Il valore assoluto di {numeroAssoluto} è {num}");
+            return num;
         }
 
         // Valore assoluto di un numero double
 
-        public static void ValoreAssoluto(double num)
+        public static double ValoreAssoluto(double num)
         {
-            double numeroAssoluto = num;
             if (num < 0)
             {
                 num = -num;
+                return num;
             }
-            Console.WriteLine($"Il valore assoluto di {numeroAssoluto} è {num}");
+            return num;
         }
 
         // Minimo tra due numeri interi
 
-        public static void Minimo(int num1, int num2)
+        public static int Minimo(int num1, int num2)
         {
-            if(num1 > num2)
+            if(num1 <= num2)
             {
-                Console.WriteLine($"{num2} è il valore minimo");
-            }
-            else if(num1 < num2)
-            {
-                Console.WriteLine($"{num1} è il valore minimo");
+                return num1;
             }
             else
             {
-                Console.WriteLine("I numeri sono uguali");
+                return num2;
             }
+       
         }
 
         // Minimo tra due numeri double
 
-        public static void Minimo(double num1, double num2)
+        public static double Minimo(double num1, double num2)
         {
-            if (num1 > num2)
+            if (num1 <= num2)
             {
-                Console.WriteLine($"{num2} è il valore minimo");
-            }
-            else if (num1 < num2)
-            {
-                Console.WriteLine($"{num1} è il valore minimo");
+                return num1;
             }
             else
             {
-                Console.WriteLine("I numeri sono uguali");
+                return num2;
             }
         }
 
         // Massimo tra due numeri interi
 
-        public static void Massimo(int num1, int num2)
+        public static int Massimo(int num1, int num2)
         {
-            if (num1 > num2)
+            if (num1 >= num2)
             {
-                Console.WriteLine($"{num1} è il valore massimo");
-            }
-            else if (num1 < num2)
-            {
-                Console.WriteLine($"{num2} è il valore massimo");
+                return num1;
             }
             else
             {
-                Console.WriteLine("I numeri sono uguali");
+                return num2;
             }
         }
 
         // Massimo tra due numeri double
 
-        public static void Massimo(double num1, double num2)
+        public static double Massimo(double num1, double num2)
         {
-            if (num1 > num2)
+            if (num1 >= num2)
             {
-                Console.WriteLine($"{num1} è il valore massimo");
-            }
-            else if (num1 < num2)
-            {
-                Console.WriteLine($"{num2} è il valore massimo");
+                return num1;
             }
             else
             {
-                Console.WriteLine("I numeri sono uguali");
+                return num2;
             }
         }
+
+        
     }
 }
