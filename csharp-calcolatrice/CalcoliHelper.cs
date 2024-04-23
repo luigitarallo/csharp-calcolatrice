@@ -143,6 +143,35 @@ namespace csharp_calcolatrice
             }
         }
 
-        
+        /*----------------
+        // BONUS POTENZA
+        -----------------*/
+
+        public static double Potenza(int baseNum, int exp)
+        {
+            if(baseNum == 0 && exp == 0)
+            {
+                return 1;
+            }
+            if(exp == 0)
+            {
+                return 1;
+            }
+            if(baseNum == 0)
+            {
+                return 0;
+            }
+            if(exp < 0)
+            {
+                return 1.0 /Potenza(baseNum, ValoreAssoluto(-exp));
+            }
+
+            double risultato = 1.0;
+            for (int i = 0; i < exp; i++)
+            {
+                risultato *= baseNum;
+            }
+            return risultato;
+        }
     }
 }

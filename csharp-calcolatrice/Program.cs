@@ -53,8 +53,12 @@
             double massimoDouble = CalcoliHelper.Massimo(5.5, 3.5);
             Console.WriteLine($"Il massimo tra 5,5 e 3,5 è {massimoDouble}");
 
+            // Potenza di un numero
+            double potenzaNum = CalcoliHelper.Potenza(4, -2);
+            Console.WriteLine($"La potenza di 4 alla -2 è {potenzaNum}");
 
-
+            double potenzaNum2 = CalcoliHelper.Potenza(4, 0);
+            Console.WriteLine($"La potenza di 4 alla 0 è {potenzaNum2}");
         }
     }
 }
