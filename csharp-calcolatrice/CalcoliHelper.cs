@@ -163,7 +163,7 @@ namespace csharp_calcolatrice
             }
             if(exp < 0)
             {
-                return 1.0 /Potenza(baseNum, ValoreAssoluto(-exp));
+                return 1.0 /Potenza(baseNum, ValoreAssoluto(exp));
             }
 
             double risultato = 1.0;
